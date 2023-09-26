@@ -1,0 +1,73 @@
+#container {
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .photobanner {
+    /*position: absolute;*/
+    top: 0px;
+    left: 0px;
+    
+    white-space: nowrap;
+    animation: bannermove 15s linear infinite;
+    display:flex;
+  }
+  
+  .photobanner img {
+    height: 100px;
+  
+    margin: 0 7em;
+  }
+  
+  .photobanner a {
+    margin: 0 1em;
+  }
+  
+  #container2 {
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .photobanner2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+    white-space: nowrap;
+    animation: bannermove2 45s linear infinite;
+    display:flex;
+  }
+  
+  .photobanner2 img {
+    height: 100px;
+  
+    margin: 0 7em;
+  }
+  
+  .photobanner2 a {
+    margin: 0 7em;
+  }
+  
+  @keyframes bannermove {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  @keyframes bannermove2 {
+    0% {
+      transform: translate(-50%, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  .main {
+    margin-top: 100px;
+  }

@@ -1,0 +1,9 @@
+.fb_dialog {
+    right: 18px !important;
+  }
+  
+  /* Hide the overlay when the chat is closed */
+  .fb-customerchat.fb_invisible_flow.fb_iframe_widget iframe {
+    display: none !important;
+  }
+  
