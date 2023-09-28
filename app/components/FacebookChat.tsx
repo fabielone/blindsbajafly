@@ -22,8 +22,6 @@ const FacebookChat: React.FC = () => {
   useEffect(() => {
     window.fbAsyncInit = () => {
       window.FB.init({
-        appId: '683967143663711',
-        autoLogAppEvents: true,
         xfbml: true,
         version: 'v18.0', // Use the latest version available
       });
@@ -43,11 +41,11 @@ const FacebookChat: React.FC = () => {
     <div>
       <div
         className="fb-customerchat"
-        attribution="setup_tool"
+        attribution="biz_inbox"
         page_id="101602886351736"
-        theme_color="#b30000"
-        logged_in_greeting="Hi! How can we help you?"
-        logged_out_greeting="Hi! How can we help you?"
+        // theme_color="#b30000"
+        // logged_in_greeting="Hi! How can we help you?"
+        // logged_out_greeting="Hi! How can we help you?"
       ></div>
     </div>
   );
