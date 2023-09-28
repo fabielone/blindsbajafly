@@ -18,7 +18,7 @@ import Subscribe from "~/components/marketing/subscribe";
 import LSection from "~/components/section/lsection";
 import RSection from "~/components/section/rsection";
 
-export const meta: V2_MetaFunction = () => [{ title: "Fabiel" }];
+export const meta: V2_MetaFunction = () => [{ title: "Blinds Baja" }];
 
 
 export default function Index() {
