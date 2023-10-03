@@ -36,6 +36,7 @@
     "@remix-run/node": "^1.19.1",
     "@remix-run/react": "^1.19.1",
     "@remix-run/serve": "^1.19.1",
+    "@sendgrid/client": "^7.7.0",
     "@types/yup": "^0.32.0",
     "bcryptjs": "^2.4.3",
     "chakra-ui-steps": "^2.1.0",

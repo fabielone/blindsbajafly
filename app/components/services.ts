@@ -82,7 +82,12 @@ export interface ServiceCategory {
         {
           id:"siguenosredes",
           label: "Siguenos y Subscribete por un 15%",
-          href: "/services/content-creation/copywriting",
+          href: "/services/promociones/siguenosredes",
+        },
+        {
+          id:"temporada",
+          label: "Descuentos de Temporada",
+          href: "/services/promociones/temporada",
         },
         
       ],

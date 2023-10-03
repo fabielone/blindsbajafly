@@ -28,6 +28,8 @@ import NavBar from "./components/NavBar";
 import WithSubnavigation from "./components/FooterNav";
 import styles from "./styles/hscroller.css";
 import FacebookChat from "./components/FacebookChat";
+import { PopupWidget } from "react-calendly";
+
 
 export const meta: V2_MetaFunction = () => [
   {
@@ -117,15 +119,36 @@ const Document = withEmotionCache(
 );
 
 export default function App() {
+
+  const rootRef = React.useRef<HTMLElement | null>(null);
+
+useEffect(() => {
+  rootRef.current = document.getElementById("root");
+}, []);
+
   return (
-    <Document>
+    <Document 
+    >
       <ChakraProvider theme={theme}>
       <NavBar />
-      <Box pt={'160px'} minH={'100vh'} mx={['5%','5%','10%','15%','15%']}>
+      <Box  id="root" pt={'160px'} minH={'100vh'} mx={['5%','5%','10%','15%','15%']}>
           <Outlet />
         </Box>
       < WithSubnavigation />
       </ChakraProvider>
+     
+ 
+      <PopupWidget
+        url="https://calendly.com/blindsbaja/presupuesto"
+        /*
+         * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+         * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+         */
+        rootElement={rootRef.current!}
+        text="Agendar Presupuesto!"
+        textColor="#ffffff"
+        color="#00a2ff"
+      />
       <FacebookChat />
     </Document>
   );

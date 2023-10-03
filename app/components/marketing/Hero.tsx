@@ -10,7 +10,8 @@ import {
   Stack,
   Text,
   useBreakpointValue,
-  IconButton
+  IconButton,
+  //ButtonGroup
 } from '@chakra-ui/react'
 import { AiOutlineWhatsApp as WhatsAppIcon } from "react-icons/ai";
 // Here we have used react-icons package for the icons
@@ -118,7 +119,8 @@ export default function Hero() {
   return (
     <Stack minH={'70vh'} direction={{ base: 'column', md: 'row' }}>
       <Flex p={2} flex={1} align={'center'} justify={'center'}
-     
+        backgroundImage={'https://res.cloudinary.com/ddcyltsxi/image/upload/v1695912920/blindsbaja/homepagemarketing/pexels-max-rahubovskiy-7061339_oiajzw.jpg'}
+        backgroundSize={'cover'}
       >
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
@@ -127,7 +129,7 @@ export default function Hero() {
               position={'relative'}
               _after={{
                 content: "''",
-                width: 'full',
+                width: 'full',  
                 height: useBreakpointValue({ base: '20%', md: '30%' }),
                 position: 'absolute',
                 bottom: 1,
@@ -143,13 +145,13 @@ export default function Hero() {
             </Text>{' '}
           </Heading>
           <Box border={'2px solid gold'} padding={["10px","10px","10px","10px","10px"]}
-          borderRadius={'xl'}>
-          <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'} fontWeight={'semibold'}>
-            Ofrecemos soluciones de persianas de alta calidad para tu hogar o negocio.
-            Nuestros productos son perfectos para brindarte privacidad y control de la luz natural.
+          bgColor={'#00000073'}
+          borderRadius={'xl'} width={['90%','90%','90%','90%','90%']}>
+          <Text fontSize={{ base: 'md', lg: 'lg' }} color={'white'} fontWeight={'semibold'} >
+            Persianas de alta calidad para tu hogar o negocio. Perfectas para brindarte privacidad y control de la luz natural.
           </Text>
           </Box>
-          <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+          <Stack direction={{ base: 'column', md: 'row' }} spacing={4} alignItems={'center'}>
           <Link
       color={'green'}
       //as={LinkRe}
@@ -165,12 +167,22 @@ export default function Hero() {
       size="lg"
     >Mandar Mensaje</Button>
     </Link>
-            <Button rounded={'full'}
-            bg={'white'}
-            color={'blue.400'}
-            border={'2px solid blue.400'}
-            borderRadius={'full'}
-            >Cotizar en Linea</Button>
+    <Link
+      
+      //as={LinkRe}
+     href='/cotizar'
+     >
+          <Button
+         variant={'outline'}
+         colorScheme='blue'
+      
+      
+        bgColor={'white'}
+        borderRadius={'full'}
+   
+      size="lg"
+    >Cotizar en Linea</Button>
+    </Link>
           </Stack>
         </Stack>
       </Flex>
