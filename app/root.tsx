@@ -19,7 +19,7 @@ import stylesheet from "~/tailwind.css";
 import globalsheet from "./styles/global.css"
 
 // root.tsx
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { withEmotionCache } from "@emotion/react";
 import { Box, ChakraProvider, extendTheme } from "@chakra-ui/react";
 
@@ -119,11 +119,20 @@ const Document = withEmotionCache(
 );
 
 export default function App() {
+// Define a state variable to track the readiness of the root element
+const [isRootElementReady, setRootElementReady] = useState(false);
 
-  const rootRef = React.useRef<HTMLElement | null>(null);
+// Define a ref for the root element
+const rootElementRef = useRef<HTMLElement | null>(null);
 
+// Use useEffect to set the ref to the root element when the component mounts
 useEffect(() => {
-  rootRef.current = document.getElementById("root");
+  rootElementRef.current = document.getElementById('root');
+  
+  // Check if the root element is available
+  if (rootElementRef.current) {
+    setRootElementReady(true); // Set readiness to true
+  }
 }, []);
 
   return (
@@ -136,7 +145,8 @@ useEffect(() => {
         </Box>
       < WithSubnavigation />
       </ChakraProvider>
-     
+     {/* Render the PopupWidget with the rootElement */}
+    { isRootElementReady && rootElementRef.current && (
  
       <PopupWidget
         url="https://calendly.com/blindsbaja/presupuesto"
@@ -144,11 +154,12 @@ useEffect(() => {
          * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
          * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
          */
-        rootElement={rootRef.current!}
+        rootElement={rootElementRef.current}
         text="Agendar Presupuesto!"
         textColor="#ffffff"
         color="#00a2ff"
       />
+    )}
       <FacebookChat />
     </Document>
   );
