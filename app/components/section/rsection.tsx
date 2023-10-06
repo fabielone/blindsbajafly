@@ -11,7 +11,6 @@ import {
   Link,
   Icon
 } from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
 import { GoChevronRight } from 'react-icons/go';
 import { MdOutlineContentCopy } from 'react-icons/md';
 
@@ -28,11 +27,11 @@ const RSection = () => {
         >
           <Box>
             <Text lineHeight={1} fontSize="md" fontWeight="semibold" mb={2}>
-              App Development
+              Enrollables
             </Text>
             <chakra.h1 fontSize="5xl" lineHeight={1} fontWeight="bold" textAlign="left">
-            Empower users with a seamless experiences  <br />
-              <chakra.span color="#6a1495">in the app-driven era</chakra.span>
+              Empodera a tus espacios con <br />
+              <chakra.span color="#6a1495">Persianas Enrollables</chakra.span>
             </chakra.h1>
           </Box>
           <Text
@@ -42,7 +41,7 @@ const RSection = () => {
             fontWeight="400"
             color="gray.500"
           >
-            Build intuitive, engaging, and versatile mobile apps utilizing the latest frameworks and tools, such as React Native and Flutter, that fuel today's most popular and successful apps across various platforms.
+            Crea ambientes únicos con nuestra colección de enrollables. Diseñados para ofrecer elegancia y funcionalidad, nuestros enrollables son ideales para personalizar la luz y la privacidad en tu hogar u oficina.
           </Text>
           <HStack spacing={{ base: 0, sm: 2 }} flexWrap="wrap">
             <Button
@@ -53,7 +52,7 @@ const RSection = () => {
               rounded="md"
               mb={{ base: 2, sm: 0 }}
             >
-              Get started
+              Ver opciones
             </Button>
             <Button
               rightIcon={<MdOutlineContentCopy />}
@@ -63,7 +62,7 @@ const RSection = () => {
               variant="outline"
               mb={{ base: 2, sm: 0 }}
             >
-              Schedule a Meeting
+              Programar una reunión
             </Button>
           </HStack>
         </Stack>
@@ -75,10 +74,10 @@ const RSection = () => {
           padding={'5%'}
         >
           <Card
-            heading="Showcase"
-            detail="Check out some great examples of chakraui products in action."
+            heading="Galería"
+            detail="Mira ejemplos impresionantes de nuestros enrollables en diferentes entornos."
           />
-          <Card heading="Blog" detail="Read the latest updates about our company and products." />
+          <Card heading="Blog" detail="Lee las últimas actualizaciones sobre nuestra empresa y productos." />
         </Stack>
       </Stack>
     </Container>
@@ -112,11 +111,12 @@ const Card = ({ heading, detail }: { heading: string; detail: string }) => {
       </Text>
       <HStack color="gray.500" alignItems="center">
         <Text fontSize="sm" textAlign="left" fontWeight="600">
-          Learn more
+          Conoce más
         </Text>
         <Icon as={GoChevronRight} w={4} h={4} />
       </HStack>
     </Stack>
   );
 };
+
 export default RSection;

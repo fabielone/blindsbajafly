@@ -11,14 +11,13 @@ import {
   Link,
   Icon
 } from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
 import { GoChevronRight } from 'react-icons/go';
 import { MdOutlineContentCopy } from 'react-icons/md';
 
 const LSection = () => {
   return (
     <Container maxW="6xl" px={{ base: 6, md: 3 }} py={14}>
-      <Stack direction={{ base: 'column', md: 'row' }} spacing={2} justifyContent="center" >
+      <Stack direction={{ base: 'column', md: 'row' }} spacing={2} justifyContent="center">
         <Stack
           direction="column"
           spacing={6}
@@ -28,11 +27,10 @@ const LSection = () => {
         >
           <Box>
             <Text lineHeight={1} fontSize="md" fontWeight="semibold" mb={2}>
-              Web Development
+              Sheer Elegance
             </Text>
             <chakra.h1 fontSize="5xl" lineHeight={1} fontWeight="bold" textAlign="left">
-              Meet Customer Expectations <br />
-              <chakra.span color="#962439">In The Digital Era</chakra.span>
+              Eleva tu Espacio con  <chakra.span color="#6a1495">Sheer Elegance</chakra.span>
             </chakra.h1>
           </Box>
           <Text
@@ -42,7 +40,7 @@ const LSection = () => {
             fontWeight="400"
             color="gray.500"
           >
-            Leverage cutting-edge technologies like React, the same framework that powers Facebook, to create dynamic, user-friendly, and high-performance websites that excel in the modern web landscape.
+            Transforma tu hogar u oficina con nuestra exquisita colección de Sheer Elegance. Fabricadas con precisión, estas persianas ofrecen estilo y funcionalidad, permitiéndote controlar la luz y la privacidad con facilidad.
           </Text>
           <HStack spacing={{ base: 0, sm: 2 }} flexWrap="wrap">
             <Button
@@ -53,7 +51,7 @@ const LSection = () => {
               rounded="md"
               mb={{ base: 2, sm: 0 }}
             >
-              Get started
+              Explora Opciones
             </Button>
             <Button
               rightIcon={<MdOutlineContentCopy />}
@@ -63,7 +61,7 @@ const LSection = () => {
               variant="outline"
               mb={{ base: 2, sm: 0 }}
             >
-              Schedule a Meeting
+              Contáctanos
             </Button>
           </HStack>
         </Stack>
@@ -73,10 +71,10 @@ const LSection = () => {
           alignItems="center"
         >
           <Card
-            heading="Showcase"
-            detail="Check out some great examples of chakraui products in action."
+            heading="Galería"
+            detail="Observa ejemplos impresionantes de nuestras Sheer Elegance en diferentes entornos."
           />
-          <Card heading="Blog" detail="Read the latest updates about our company and products." />
+          <Card heading="Blog" detail="Mantente actualizado con las últimas tendencias y consejos para tratamientos de ventanas." />
         </Stack>
       </Stack>
     </Container>
@@ -110,11 +108,12 @@ const Card = ({ heading, detail }: { heading: string; detail: string }) => {
       </Text>
       <HStack color="gray.500" alignItems="center">
         <Text fontSize="sm" textAlign="left" fontWeight="600">
-          Learn more
+          Aprende más
         </Text>
         <Icon as={GoChevronRight} w={4} h={4} />
       </HStack>
     </Stack>
   );
 };
+
 export default LSection;

@@ -10,40 +10,39 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 
+
+
 const testimonials = [
   {
-    name: 'Brandon P.',
-    role: 'Chief Marketing Officer',
+    name: 'Sofía R.',
     content:
-      'It really saves me time and effort. It is exactly what our business has been lacking. EEZY is the most valuable business resource we have EVER purchased. After using EEZY my business skyrocketed!',
+      'Las persianas de Blinds Baja realmente han mejorado la estética de mi hogar. Son fáciles de operar y proporcionan un control de la luz excelente en mi sala de estar. No podría estar más feliz con mi elección.',
     avatar:
-      'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+      'URL_DE_LA_IMAGEN_DE_SOFIA',
   },
   {
-    name: 'Krysta B.',
-    role: 'Entrepreneur',
+    name: 'Javier M.',
     content:
-      "I didn't even need training. We've used EEZY for the last five years. I have gotten at least 50 times the value from EEZY. I made back the purchase price in just 48 hours!",
+      'La elegancia de las persianas enrollables de Blinds Baja es incomparable. Las instalamos en nuestra oficina y el ambiente ha mejorado significativamente. Su instalación profesional fue rápida y eficiente.',
     avatar:
-      'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+      'URL_DE_LA_IMAGEN_DE_JAVIER',
   },
   {
-    name: 'Darcy L.',
-    role: 'Movie star',
+    name: 'Andrea G.',
     content:
-      "Thank you for making it painless, pleasant and most of all, hassle free! I'm good to go. No matter where you go, EEZY is the coolest, most happening thing around! I love EEZY!",
+      '¡Las persianas de Blinds Baja son increíbles! Las hemos usado en nuestra habitación durante años y todavía se ven como nuevas. La calidad y durabilidad son notables. Definitivamente valen su precio.',
     avatar:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80',
+      'URL_DE_LA_IMAGEN_DE_ANDREA',
   },
   {
-    name: 'Daniel T.',
-    role: 'Musician',
+    name: 'Carlos P.',
     content:
-      'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!',
+      'No necesité capacitación para usar las persianas de Blinds Baja. Son sencillas y funcionales. Además, el descuento del 15% por suscribirme y seguirlos en las redes sociales fue un agradable beneficio adicional.',
     avatar:
-      'https://images.unsplash.com/photo-1606513542745-97629752a13b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+      'URL_DE_LA_IMAGEN_DE_CARLOS',
   },
-]
+];
+
 
 const backgrounds = [
   `url("data:image/svg+xml, %3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'560\' height=\'185\' viewBox=\'0 0 560 185\' fill=\'none\'%3E%3Cellipse cx=\'102.633\' cy=\'61.0737\' rx=\'102.633\' ry=\'61.0737\' fill=\'%23ED64A6\' /%3E%3Cellipse cx=\'399.573\' cy=\'123.926\' rx=\'102.633\' ry=\'61.0737\' fill=\'%23F56565\' /%3E%3Cellipse cx=\'366.192\' cy=\'73.2292\' rx=\'193.808\' ry=\'73.2292\' fill=\'%2338B2AC\' /%3E%3Cellipse cx=\'222.705\' cy=\'110.585\' rx=\'193.808\' ry=\'73.2292\' fill=\'%23ED8936\' /%3E%3C/svg%3E")`,
@@ -54,14 +53,13 @@ const backgrounds = [
 
 interface TestimonialCardProps {
   name: string
-  role: string
   content: string
   avatar: string
   index: number
 }
 
 function TestimonialCard(props: TestimonialCardProps) {
-  const { name, role, content, avatar, index } = props
+  const { name, content, avatar, index } = props
   return (
     <Flex
       boxShadow={'lg'}
@@ -104,10 +102,7 @@ function TestimonialCard(props: TestimonialCardProps) {
         </chakra.p>
         <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={14}>
           {name}
-          <chakra.span fontFamily={'Inter'} fontWeight={'medium'} color={'gray.500'}>
-            {' '}
-            - {role}
-          </chakra.span>
+        
         </chakra.p>
       </Flex>
       <Avatar
@@ -131,35 +126,36 @@ export default function Reviews() {
       width={'full'}
       overflow={'hidden'}>
       <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
-        <chakra.h3
-          fontFamily={'Work Sans'}
-          fontWeight={'bold'}
-          fontSize={20}
-          textTransform={'uppercase'}
-          color={'purple.400'}>
-          People love us
-        </chakra.h3>
-        <chakra.h1
-          py={5}
-          fontSize={48}
-          fontFamily={'Work Sans'}
-          fontWeight={'bold'}
-          color={useColorModeValue('gray.700', 'gray.50')}>
-          You&apos;re in good company
-        </chakra.h1>
-        <chakra.h2
-          margin={'auto'}
-          width={'70%'}
-          fontFamily={'Inter'}
-          fontWeight={'medium'}
-          color={useColorModeValue('gray.500', 'gray.400')}>
-          See why over{' '}
-          <chakra.strong color={useColorModeValue('gray.700', 'gray.50')}>
-            150,000+
-          </chakra.strong>{' '}
-          influencers use EEZY to manage their social media content!
-        </chakra.h2>
-      </Box>
+  <chakra.h3
+    fontFamily={'Work Sans'}
+    fontWeight={'bold'}
+    fontSize={20}
+    textTransform={'uppercase'}
+    color={'purple.400'}>
+    A nuestros clientes les encanta
+  </chakra.h3>
+  <chakra.h1
+    py={5}
+    fontSize={48}
+    fontFamily={'Work Sans'}
+    fontWeight={'bold'}
+    color={useColorModeValue('gray.700', 'gray.50')}>
+    Estás en buena compañía
+  </chakra.h1>
+  <chakra.h2
+    margin={'auto'}
+    width={'70%'}
+    fontFamily={'Inter'}
+    fontWeight={'medium'}
+    color={useColorModeValue('gray.500', 'gray.400')}>
+    Descubre por qué más de{' '}
+    <chakra.strong color={useColorModeValue('gray.700', 'gray.50')}>
+      150,000+
+    </chakra.strong>{' '}
+    personas eligen Blinds Baja para cubrir sus ventanas con estilo.
+  </chakra.h2>
+</Box>
+
       <SimpleGrid columns={{ base: 1, xl: 2 }} spacing={'20'} mt={16} mb={16} mx={'auto'}>
         {testimonials.map((cardInfo, index) => (
           <TestimonialCard key={index} {...cardInfo} index={index} />

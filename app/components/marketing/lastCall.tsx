@@ -1,5 +1,3 @@
-'use client'
-
 import { Stack, Flex, Button, Text, VStack, useBreakpointValue } from '@chakra-ui/react'
 
 export default function LastCall() {
@@ -23,7 +21,7 @@ export default function LastCall() {
             fontWeight={700}
             lineHeight={1.2}
             fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
+            Encuentra las persianas perfectas para tu hogar o negocio en Blinds Baja
           </Text>
           <Stack direction={'row'}>
             <Button
@@ -31,14 +29,14 @@ export default function LastCall() {
               rounded={'full'}
               color={'white'}
               _hover={{ bg: 'blue.500' }}>
-              Show me more
+              Ver más
             </Button>
             <Button
               bg={'whiteAlpha.300'}
               rounded={'full'}
               color={'white'}
               _hover={{ bg: 'whiteAlpha.500' }}>
-              Show me more
+              Contáctanos
             </Button>
           </Stack>
         </Stack>

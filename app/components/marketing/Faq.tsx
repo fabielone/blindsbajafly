@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Accordion,
   AccordionItem,
@@ -28,13 +26,12 @@ export default function Faq() {
               alignItems="center"
               justifyContent="space-between"
               p={4}>
-              <Text fontSize="md">What is Chakra UI?</Text>
+              <Text fontSize="md">¿Cuáles son los tipos de persianas disponibles?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
               <Text color="gray.600">
-                Chakra UI is a simple and modular component library that gives developers
-                the building blocks they need to create web applications.
+                Ofrecemos una amplia gama de persianas, incluyendo persianas enrollables, persianas de madera, persianas de tela, persianas verticales, y más. Cada tipo de persiana tiene sus propias ventajas y características únicas. Puedes obtener más detalles sobre cada tipo de persiana en nuestra página de productos.
               </Text>
             </AccordionPanel>
           </AccordionItem>
@@ -44,14 +41,12 @@ export default function Faq() {
               alignItems="center"
               justifyContent="space-between"
               p={4}>
-              <Text fontSize="md">What advantages to use?</Text>
+              <Text fontSize="md">¿Cómo puedo solicitar un presupuesto gratuito?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
               <Text color="gray.600">
-                Chakra UI offers a variety of advantages including ease of use,
-                accessibility, and customization options. It also provides a comprehensive
-                set of UI components and is fully compatible with React.
+                Solicitar un presupuesto gratuito es fácil. Simplemente completa nuestro formulario en línea con los detalles de tu proyecto y tus datos de contacto. Uno de nuestros expertos se pondrá en contacto contigo para proporcionarte un presupuesto personalizado.
               </Text>
             </AccordionPanel>
           </AccordionItem>
@@ -61,18 +56,61 @@ export default function Faq() {
               alignItems="center"
               justifyContent="space-between"
               p={4}>
-              <Text fontSize="md">How to start using Chakra UI?</Text>
+              <Text fontSize="md">¿Cuál es el tiempo de entrega promedio de las persianas?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
               <Text color="gray.600">
-                To get started with Chakra UI, you can install it via npm or yarn, and
-                then import the components you need in your project. The Chakra UI
-                documentation is also a great resource for getting started and learning
-                more about the library.
+                El tiempo de entrega promedio de las persianas varía según el tipo y la cantidad de persianas que necesitas. Nuestro equipo te proporcionará un plazo de entrega estimado cuando solicites un presupuesto. Hacemos todo lo posible para entregar tus persianas de manera oportuna.
               </Text>
             </AccordionPanel>
           </AccordionItem>
+          <AccordionItem>
+            <AccordionButton
+              display="flex"
+              alignItems="center"
+              justifyContent="space-between"
+              p={4}>
+              <Text fontSize="md">¿Ofrecen instalación profesional?</Text>
+              <ChevronDownIcon fontSize="24px" />
+            </AccordionButton>
+            <AccordionPanel pb={4}>
+              <Text color="gray.600">
+                Sí, ofrecemos servicios de instalación profesional. Nuestro equipo de expertos se encargará de instalar tus persianas de manera precisa y cuidadosa, asegurándose de que funcionen perfectamente. La instalación profesional garantiza resultados óptimos.
+              </Text>
+            </AccordionPanel>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionButton
+              display="flex"
+              alignItems="center"
+              justifyContent="space-between"
+              p={4}>
+              <Text fontSize="md">¿Puedo programar una consulta en persona para obtener más información?</Text>
+              <ChevronDownIcon fontSize="24px" />
+            </AccordionButton>
+            <AccordionPanel pb={4}>
+              <Text color="gray.600">
+                Sí, estamos encantados de programar consultas en persona. Comunícate con nosotros para coordinar una cita conveniente. Nuestros especialistas estarán disponibles para responder a todas tus preguntas y proporcionarte información detallada sobre nuestros productos y servicios.
+              </Text>
+            </AccordionPanel>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionButton
+              display="flex"
+              alignItems="center"
+              justifyContent="space-between"
+              p={4}>
+              <Text fontSize="md">¿Ofrecen descuentos para proyectos comerciales?</Text>
+              <ChevronDownIcon fontSize="24px" />
+            </AccordionButton>
+            <AccordionPanel pb={4}>
+              <Text color="gray.600">
+                Sí, ofrecemos descuentos especiales para proyectos comerciales y proyectos de gran envergadura. Contáctanos para discutir tus necesidades comerciales y cómo podemos ayudarte a obtener las mejores soluciones de persianas para tu negocio.
+              </Text>
+            </AccordionPanel>
+          </AccordionItem>
+          {/* Add more FAQ items here */}
         </Accordion>
       </Container>
     </Flex>
