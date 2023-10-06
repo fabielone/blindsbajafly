@@ -45,9 +45,9 @@ export function Carousel() {
 
   // These are the images used in the slide
   const cards = [
-    'https://images.unsplash.com/photo-1612852098516-55d01c75769a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-    'https://images.unsplash.com/photo-1627875764093-315831ac12f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-    'https://images.unsplash.com/photo-1571432248690-7fd6980a1ae2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+    'https://res.cloudinary.com/ddcyltsxi/image/upload/v1695912891/blindsbaja/homepagemarketing/pexels-max-rahubovskiy-7061668_t2atid.jpg',
+    'https://res.cloudinary.com/ddcyltsxi/image/upload/v1695912888/blindsbaja/homepagemarketing/pexels-max-rahubovskiy-7061334_n1jbhz.jpg',
+    'https://res.cloudinary.com/ddcyltsxi/image/upload/v1695912911/blindsbaja/homepagemarketing/pexels-avinash-gumber-11097671_ntovcv.jpg',
   ]
 
   return (
