@@ -9,8 +9,8 @@ export const meta: V2_MetaFunction = () => [{ title: "Fabiel" }];
 export default function We() {
   return (
     <>
-      <NavBar />
-      <Box pt={'160px'} minH={'100vh'}>
+      
+      <Box pt={'20px'} minH={'100vh'}>
       <Outlet />
       </Box>
       <LargeWithNewsletter />

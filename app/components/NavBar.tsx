@@ -165,7 +165,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue('white', 'white');
 
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Stack direction={'row'} spacing={4} alignItems={'center'}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label} >
           <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -273,7 +273,9 @@ const MobileNav = () => {
     <Stack
       bg={useColorModeValue('white', 'gray.800')}
       p={4}
-      display={{ md: 'none' }}>
+      display={{ md: 'none' }}
+      alignItems={'center'}
+      >
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
@@ -378,9 +380,6 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Cotizar en Línea",
     href: "https://learn.omnitek.dev",
   },
-  {
-    label: "Agendar Presupuesto",
-    href: "/contact",
-  },
+ 
 ];
 
